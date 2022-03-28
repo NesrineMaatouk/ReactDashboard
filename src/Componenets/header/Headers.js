@@ -21,17 +21,15 @@ const useStyles = makeStyles({
   root:{
       
       backgroundColor:'#fff',
-      borderBottom:'0',
-      boxShadow:'0 0 2rem 0 rgb(41 48 66 / 10%)'  
-    },
+      },
     
-      '& .MuiSvgIcon-root':{
-        marginRight:'8px'
+     
+      Icons:{
+        color:'red'
       },
   
-    tolbar:{
-      marginLeft:'260px'
-  }
+    
+  
 
 
 })
@@ -141,7 +139,7 @@ export default function PrimarySearchAppBar() {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={3} color="error">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -153,7 +151,7 @@ export default function PrimarySearchAppBar() {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge badgeContent={7} color="error">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -177,11 +175,11 @@ export default function PrimarySearchAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" className={classes.root}>
-        <Toolbar className={classes.tolbar}>
-          <IconButton
+        <Toolbar >
+          <IconButton className={classes.Icons}
             size="large"
             edge="start"
-            color="inherit"
+            
             aria-label="open drawer"
             sx={{ mr: 2 }}
             
@@ -208,7 +206,7 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={3} color="error">
                 <MailIcon />
               </Badge>
             </IconButton>
@@ -217,7 +215,7 @@ export default function PrimarySearchAppBar() {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={7} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

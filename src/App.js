@@ -1,18 +1,24 @@
 import './App.css';
-import PrimarySearchAppBar from './Componenets/header/Headers';
-/*import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';*/
-import PersistentDrawerLeft from './Componenets/SideBar/SideBar'
+import Home from './Pages/Home/Home';
+import Table from './Pages/Tables/Tables';
+import Forms from './Pages/Forms/Forms';
+
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import Layout from './Componenets/Layout/Layout';
 
 function App() {
   return (
     <div className="App">
-      <PrimarySearchAppBar/>
-      <PersistentDrawerLeft/>
-      <h1>Bonjour de</h1>
-      
-       
-       
-      
+      <Router>
+        <Layout>
+          <Switch>
+             <Route exact path='/'render={()=><Home/>}/>
+             <Route path='/Table'render={()=><Table/>}/>
+             <Route path='/Forms'render={()=><Forms/>}/>
+          </Switch>
+          </Layout>
+      </Router>  
+         
     </div>
   );
 }
