@@ -2,7 +2,6 @@ import './App.css';
 import Home from './Pages/Home/Home';
 import Table from './Pages/Tables/Tables';
 import Forms from './Pages/Forms/Forms';
-
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import Layout from './Componenets/Layout/Layout';
 
